@@ -60,7 +60,7 @@
 
     <h1>Игра угадай число</h1>
 
-    <p>Вы должны ввести рандомное число от 1 до 100. Посмотрим, сможешь ли ты угадать число за 5 попыток. Мы будем подсказывать, ты ввел число меньше загаданного или больше</p>
+    <p>Вы должны ввести рандомное число от 1 до 100. Посмотрим, сможешь ли ты угадать число за 10 попыток. Мы будем подсказывать, ты ввел число меньше загаданного или больше</p>
 
     <div class="form">
         <label for="guessField">Введи предпологаемое число: </label>
@@ -97,7 +97,7 @@
                 lastResult.style.backgroundColor = 'green';
                 lowOrHi.textContent = '';
                 setGameOver();
-            } else if (guessCount === 5) {
+            } else if (guessCount === 10) {
                 lastResult.textContent = '!!!Конец игры (┬┬﹏┬┬), повезет в слуедующий раз!!!';
                 lowOrHi.textContent = '';
                 setGameOver();
@@ -105,9 +105,9 @@
                 lastResult.textContent = 'Неверно!';
                 lastResult.style.backgroundColor = 'red';
                 if (userGuess < randomNumber) {
-                    lowOrHi.textContent = 'Предпологаемое число меньше задуманного';
+                    lowOrHi.textContent = 'Ваше число меньше загаданного';
                 } else if (userGuess > randomNumber) {
-                    lowOrHi.textContent = 'Предпологаемое число больше задуманного';
+                    lowOrHi.textContent = 'Ваше число больше загаданного';
                 }
             }
 
